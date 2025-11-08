@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Simple HTML/CSS Website</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="brand" href="#">
+          <!-- simple inline SVG logo so no extra files are required -->
+          <svg class="logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" fill="var(--accent)" />
+            <text x="12" y="16" text-anchor="middle" fill="#fff" font-size="10" font-family="Arial" font-weight="700">MS</text>
+          </svg>
+          <span class="brand-text">MySite</span>
+        </a>
+
+        <!-- CSS-only hamburger using checkbox hack -->
+        <input id="nav-toggle" type="checkbox" class="nav-toggle" />
+        <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
+          <span></span>
+        </label>
+
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+          <li class="nav-cta"><a class="btn" href="#">Get Started</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <div class="container">
+        <h1>Simple HTML & CSS Website</h1>
+        <p>Responsive, minimal, and ready to customize. This starter has a CSS-only responsive navbar.</p>
+        <p><a class="cta" href="#">Get started</a></p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">&copy; <span id="year"></span> MySite — Built with HTML & CSS</div>
+    </footer>
+
+    <script>
+      // small progressive enhancement to set year; still no site functionality required
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
